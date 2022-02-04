@@ -29,3 +29,19 @@ let prev = () =>
         imgShow.src = photos[count]
     }
 }
+
+let autoChange = () =>
+{
+    setInterval(() =>
+    {
+        if (count >= photos.length)
+        {
+            count = 0;
+            imgShow.src = photos[ count ];
+        } else
+        {
+            imgShow.src = photos[ count ];
+        }
+        count++;
+    }, 1000)
+}
